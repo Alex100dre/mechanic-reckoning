@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	
+	<title>Mechanic Reckoning</title>
+	<link rel="stylesheet" href="css/play.css">
+</head>
+<body>
+
+	<script src="js/jquery-1.9.0.min.js"></script>
+	<script src="hammer/hammer.min.js"></script>
+	
+	<script src="js/app.js"></script>
+	<script src="js/ui.js"></script>
+	<script src="js/settings.js"></script>
+	
+
+
+	
+	<script src="js/level.js"></script>
+	<script src="js/heros.js"></script>
+	<script src="js/grappin.js"></script>
+	<script src="js/robot.class.js"></script>
+	<script src="js/add_robot.js"></script>
+	<script src="js/boss.js"></script>
+	<script src="js/animationclint.js"></script>
+	<script src="js/animationrobots.js"></script>
+	<script src="js/engine.js"></script>
+	<script src="js/dataScore.js"></script>
+
+	<script type="text/javascript">
+		
+		$(document).ready(function() {
+		  app.init();
+		});
+	</script>
+	
+	<div id="win"class="wrapper">
+		<img src="assets/img/win-lose/gagne.png" />
+		<p id="scoreWin" class="blue"><span></span></p>
+		<div id="nomWin"></div>
+		<br />
+		<br />
+		<br />
+		<div class="groupe">
+			<a href="play.html"><div class="champtexte">Rejouer</div><img src="assets/img/score-options-credits/back.png" /> </a>
+			<a href="index.html"><div class="champtexte">Menu</div><img src="assets/img/score-options-credits/back.png" /> </a>
+		</div>
+	</div>
+	<div id="lose"class="wrapper">
+		<img src="assets/img/win-lose/perdu.png" />
+		<p id="scoreLose" class="blue"><span></span></p>
+		<div id="nomLose"></div>
+		<br />
+		<br />
+		<br />
+		<div class="groupe">
+			<a href="play.html"><div class="champtexte">Rejouer</div><img src="assets/img/score-options-credits/back.png" /> </a>
+			<a href="index.html"><div class="champtexte">Menu</div><img src="assets/img/score-options-credits/back.png" /> </a>
+		</div>
+	</div>
+
+	<audio src="assets/mp3/Constancy.ogg" id="lecteur" loop="loop"></audio>
+	<audio src="assets/mp3/explosion.ogg" id="bomb" ></audio>
+	<audio src="assets/mp3/gun.ogg" id="gun" ></audio>
+</body>
+</html>

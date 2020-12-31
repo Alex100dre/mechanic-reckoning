@@ -1,0 +1,192 @@
+/*==========================================================================
+ * Ecran d'accueil
+ */
+@font-face
+{
+        font-family: "b2sq";
+        src: url("../assets/font/b2sq.ttf");
+}
+@font-face
+{
+        font-family: "ananda";
+        src: url("../assets/font/ananda.TTF");
+}
+
+body{
+	background-image: url('../assets/img/home/bg.png');
+	background-repeat:no-repeat;
+	background-color:#000;
+	padding:0px;
+	margin:0px;
+	width:800px;
+}
+a{
+	color: #00fff6;
+	text-decoration: none;
+}
+
+a:visited{
+	color: #00fff6;
+}
+/*===================================================haut======================================================*/
+#logo{
+	background-image: url('../assets/img/home/bgTitle.png');
+	background-repeat:no-repeat;
+	background-position: -50px 0;
+	width:800px;
+	height:435px;
+	margin:0 auto;
+}
+
+/*====================================================millieu===================================================*/
+#space{
+	height:200px;
+}
+
+/*====================================================bas=======================================================*/
+#play{
+	background-image: url('../assets/img/home/bgPlay.png');
+	background-repeat:no-repeat;
+	width:310px;
+	margin:0 auto;
+	font-family:"b2sq", sans-serif;
+	text-align:center;
+	font-size:70px;
+	line-height : 115px;
+}
+#menu{
+	width:705px;
+	padding-left: 95px;
+	margin:0 auto;
+	list-style-type:none; 
+}
+#menu li{
+	font-family:"b2sq", sans-serif;
+	font-size : 40px;
+	display : inline;
+	text-align : center;
+	margin-right:50px;
+	background-image: url('../assets/img/home/bgBTN.png');
+	background-repeat:no-repeat;
+	 padding: 10px 50px;
+}
+#menu li:last-child{
+	margin-right:0px;	
+}
+/*==================================================================================================================
+ * Score
+ */
+.bg2{
+	background-image: url('../assets/img/score-options-credits/bg2.png');
+	background-repeat:no-repeat;
+}
+.wrapper{
+	background-image: url('../assets/img/score-options-credits/wrapper.png');
+	background-repeat:no-repeat;
+	width: 762px;
+	height:980px;
+	margin:0 auto;
+	text-align:center;
+	color:#fff;
+}
+.blue{
+	color:#00FFF6;
+	font-family:"b2sq", sans-serif;
+}
+.wrapper h1{
+	padding-top:100px;
+	font-size:90px;
+}
+.best{
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	font-size: 30px;
+}
+
+.scoreList{
+	list-style-type: none;
+	
+	border-top: 1px dashed #fff;
+	border-bottom: 1px dashed #fff;
+	width:500px;
+	margin:0 auto;
+	height:340px;
+	margin-top:80px;
+	font-size: 25px;
+	line-height: 70px;
+}
+.scoreList li span:first-child{
+	text-align:right;
+	width:200px;
+	float: left;
+}
+
+.scoreList li span:last-child{
+	text-align:left;
+	width:260px;
+	float: right;
+}
+
+/*==================================================================================================================
+ * Options
+ */
+
+.checkOption{
+	padding:0; /*reset padding*/
+	padding-top:170px;
+	font-family:"b2sq", sans-serif;
+	font-size:70px;
+	line-height:30px;
+	text-align : right;
+	list-style-type:none; 
+	margin: 0 auto;
+}
+.checkOption li{
+	height:100px;
+	width:220px;
+	margin: 0 auto;
+}
+
+.checkOption li div{
+	width:50px;
+	height:50px;
+	float:right;
+	margin-left:20px;
+}	
+/*==================================================================================================================
+ * Options
+ */
+.creditList{
+	padding: 0 100px;
+	font-family:"b2sq", sans-serif;
+	font-size:60px;
+	line-height:60px;
+	list-style-type:none; 
+	margin: 0 auto;
+}
+.creditList h3{
+	 margin: 0 0 30px;
+	 font-family:"ananda", sans-serif;
+	 font-size:50px;
+}
+.creditList #dev{
+	text-align : right;
+}
+.creditList #gra{
+	text-align : right;
+}
+#nomLi #nom{
+	font-size: 50px;
+	width:250px;
+	height:50px;
+	font-family:"b2sq", sans-serif;
+}
+#nomLi input {
+    padding: 5px;   
+    
+    /*Applying CSS3 gradient*/
+   /* background: linear-gradient(to left,  #000 1px, #FFF 200px);    */
+      
+    border-radius: 7px;
+}
+

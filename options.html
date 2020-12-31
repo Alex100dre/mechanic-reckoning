@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Mechanic Reckoning</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/checkbox.css">
+	<script src="js/jquery-1.9.0.min.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/ui.js"></script>
+	<script src="js/settings.js"></script>
+	<script src="js/dataScore.js"></script>
+</head>
+<body class="bg2">
+	<div class="wrapper">
+		<h1 class="blue">Options</h1>
+		<ul class="checkOption">
+			<li id="nomLi"></li>
+			<script>
+				app.ui.dataScore.restoreName();
+				$("#nomLi").append("<input type='text' id='nom' value="+app.settings.score.name+" />");
+			</script>
+			<!-- ziiik -->
+			<li ><span>Musique</span>
+				<div id="zikli">
+					<script>
+						app.ui.dataScore.getzik();
+						if (app.settings.zik=="false") {
+							$("#zikli").append("<input type='checkbox' id='musique' name='musique' />");
+						}else{
+							$("#zikli").append("<input type='checkbox' id='musique' name='musique' checked />");
+						}
+					</script>
+					
+					<label for="musique"></label>
+				</div>
+
+			</li>
+			<li>
+				<span>Son</span>
+				<div id="sonli">
+					<script>
+						app.ui.dataScore.getsons();
+						if (app.settings.sons=="false") {
+							$("#sonli").append("<input type='checkbox' id='son' name='son' />");
+						}else{
+							$("#sonli").append("<input type='checkbox' id='son' name='son' checked />");
+						}
+					</script>
+					<label for="son"></label>
+				</div>
+			</li>	
+		</ul>
+		<br />
+		<br />
+		<br />
+		<a href="index.html" id="confirm"><img src="assets/img/score-options-credits/back.png" /> </a>
+	</div>
+	<script>
+			$("#confirm").click( function(){ 
+				app.settings.score.name=$("#nom").val();
+
+				if (document.getElementById("musique").checked){
+				 	var musique = JSON.stringify("true");
+					window.localStorage['data.musicstat'] = musique;
+				}else{
+					var musique = JSON.stringify("false");
+					window.localStorage['data.musicstat'] = musique;
+				}
+				if (document.getElementById("son").checked){
+				 	var son = JSON.stringify("true");
+					window.localStorage['data.sonstat'] = son;
+				}else{
+					var son = JSON.stringify("false");
+					window.localStorage['data.sonstat'] = son;
+				}
+			});
+			$("#confirm").click( function(){
+				app.ui.dataScore.saveName();
+				app.ui.dataScore.restoreName();
+			 });
+		</script>
+</body>
+</html>
